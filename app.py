@@ -14,7 +14,7 @@ def list_tasks():
         print("Hiện không có công việc nào.")
         return
     
-    print("#--Danh sách công việc:#--") #--in danh sach--
+    print("#--Danh sách công việc:#--")
     for i, task in enumerate(tasks, start=1):
         print(f"{i}. {task}")
 
@@ -28,3 +28,13 @@ def delete_task(task_index):
         return
     removed = tasks.pop(task_index - 1)
     print(f"Đã xóa công việc: '{removed['name']}'")
+
+if __name__ == "__main__":
+    print("Chào mừng đến với ứng dụng To-Do List!")
+    add_task("Học bài Git và GitHub")
+    add_task("Làm bài tập thực hành ở nhà")
+    list_tasks()
+    complete_task(2)   # đánh dấu công việc số 2 hoàn thành
+    list_tasks()
+    delete_task(1)     # xóa công việc số 1
+    list_tasks()
