@@ -13,6 +13,6 @@ def list_tasks():
         print("Hiện không có công việc nào.")
         return
     
-    print("Danh sách công việc:")
+    print("#--Danh sách công việc:#--") #--in danh sach--
     for i, task in enumerate(tasks, start=1):
         print(f"{i}. {task}")
